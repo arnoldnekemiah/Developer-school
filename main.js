@@ -1,3 +1,32 @@
+// Humburger menu
+const openHambuger = document.querySelector('.fa-bars');
+const menu = document.querySelector('.newMenu');
+const closeButton = document.querySelector('.fa-times');
+/* open button */
+openHambuger.addEventListener('click', () => {
+  menu.style.visibility = 'visible';
+  openHambuger.style.display = 'none';
+  closeButton.style.display = 'block';
+});
+
+/* clossing button ... */
+closeButton.addEventListener('click', () => {
+  menu.style.display = 'none';
+  openHambuger.style.display = 'block';
+  closeButton.style.display = 'none';
+});
+
+const menuItems = document.querySelectorAll('.menu-item');
+
+menuItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    menu.style.display = 'none';
+    openHambuger.style.display = 'block';
+    closeButton.style.display = 'none';
+  });
+});
+
+// speakers section
 const speakers = [
     {
       name: 'Ikonde Arnold',
@@ -42,43 +71,78 @@ const speakers = [
         autobio: 'As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary collaboration and understanding among science technology, humanities, and the arts.'
       }    
   ];
- 
-const speakersSection = document.querySelector('.speakers');
-const displayed = 3;
+  const speakersSection = document.querySelector('.speakerCard1');
+const speakersSectionMore = document.querySelector('.speakerCard2');
+const speakersMore = document.querySelector('.speakers_more');
+const displayed = 2;
+
+function generateSpeakerCard(speaker) {
+  return `
+    <div class="speaker_card">
+      <div class="speaker_img">
+        <img src="${speaker.image}" alt="${speaker.alt}">
+      </div>
+      <div class="speaker_info">
+        <p class="speaker_name">${speaker.name}</p>
+        <p class="speaker_profession">${speaker.intro}</p>
+        <hr/>
+        <p class="speaker_desc">${speaker.autobio}</p>
+      </div>
+    </div>
+  `;
+}
 
 function displaySpeakers(from, to) {
+  let speakersHTML = '';
+  let speakersMoreHTML = '';
+  
   for (let i = from; i < to; i += 1) {
-    speakersSection.innerHTML += `
-      <div class="speaker_card">
-        <div class="speaker_img">
-          <img src="${speakers[i].image}" alt="${speakers[i].alt}">
-        </div>
-        <div class="speaker_info">
-          <p class="speaker_name">${speakers[i].name}</p>
-          <p class="speaker_profession">${speakers[i].prof}</p>
-          <hr/>
-          <p class="speaker_desc">${speakers[i].desc}</p>
-        </div>
-      </div>
-    `;
+    const speaker = speakers[i];
+    
+    if (i < displayed) {
+      speakersHTML += generateSpeakerCard(speaker);
+    } else {
+      speakersMoreHTML += generateSpeakerCard(speaker);
+    }
   }
+
+  speakersSection.innerHTML = speakersHTML;
+  speakersSectionMore.innerHTML = speakersMoreHTML;
 }
 
 function checkScreenSize() {
-  return window.innerWidth <= 767 ? 3 : speakers.length;
+  return window.innerWidth <= 767 ? 2 : speakers.length;
 }
 
 window.addEventListener('resize', () => {
-  speakersSection.innerHTML = '';
   displaySpeakers(0, checkScreenSize());
 });
 
 if (document.readyState !== 'loading') {
-  speakersSection.innerHTML = '';
   displaySpeakers(0, checkScreenSize());
 } else {
   document.addEventListener('DOMContentLoaded', () => {
-    speakersSection.innerHTML = '';
     displaySpeakers(0, checkScreenSize());
   });
 }
+
+function displayMore() {
+  const remainingSpeakers = speakers.slice(displayed);
+  let speakersMoreHTML = '';
+  
+  for (const speaker of remainingSpeakers) {
+    speakersMoreHTML += generateSpeakerCard(speaker);
+  }
+  
+  speakersSectionMore.innerHTML = speakersMoreHTML;
+}
+
+speakersMore.addEventListener('click', (event) => {
+  if (speakersMore.innerHTML === 'SEE LESS<i class="fas fa-angle-up" aria-hidden="true"></i>') {
+    speakersMore.innerHTML = 'More<i class="fas fa-angle-down"></i>';
+    speakersSectionMore.innerHTML = '';
+  } else {
+    displayMore();
+    speakersMore.innerHTML = 'SEE LESS<i class="fas fa-angle-up"></i>';
+  }
+});

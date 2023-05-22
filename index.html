@@ -13,16 +13,32 @@
 </head>
 <body>
     <header>
+        <div class="navbar">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <ul>
+                <li><a href="#">English</a></li>
+                <li><a href="#">My Page</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
         <nav class="nav">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-                <img class="logo" src="./images/logo.png" alt="logo">
+                <i class="fa fa-bars material-icons" aria-hidden="true"></i>
+                <i class="fa fa-times material-icons" aria-hidden="true"></i>
+           
+            <img class="logo" src="./images/logo3.png" alt="logo">
+            <ul class="newMenu">
+                <li class="list-item"><a href="about-page.html">About</a></li>
+                <li class="list-item"><a href="#program">Program</a></li>
+                <li class="list-item"><a href="#">Join</a></li>
+                <li class="list-item"><a href="#">Sponsor</a></li>
+                <li class="list-item"><a href="#">News</a></li>
+                <li class="list-item"><div><a href="#">CC campain</a></div></li>
+            </ul>
         </nav>
+        
     </header>
     <section class="hero">
-
-       <h4><a href="about-page.html">About Page</a></h4>
-
-
         <img class="hello-img" src="./images/hero_img.png" alt="">
         <div class="theme">
             <p class="theme-text">
@@ -35,6 +51,7 @@
         </div>
     </section>
     <section class="program">
+        <div class="program-container">
             <h2 class="main-program">Main program</h2>
             <div class="program-card">
                 <img class="program-icon1" src="./images/program_icon_01.png" alt="icon-1">
@@ -71,11 +88,22 @@
                     <p class="lecture-content">get opportunities to network with CC affiliates around the world, also after the summit.</p>
                 </div>
             </div>
-            <button class="join-btn">Join the Bootcamp 2023</button>
             
+        </div>
+        <button class="join-btn">Join the Bootcamp 2023</button>
+            <p class="conc">SEE THE WHOLE PROGRAM</p>
     </section>
-    <section class="speakers"></section>
-
+    <section class="speakers">
+        <div class="speakers_header">
+          <h3 class="speakers_section_title">Featured Speakers</h3>
+          <hr class="line"/>
+        </div>
+        <div class="speakerCard1"></div>
+        <div class="speakerCard2"></div>
+        <div class="speakers_more">SEE MORE<i class="fas fa-angle-down"></i>
+        </div>
+      </section>
+      
     <script src="main.js"></script>
 </body>
 </html>
