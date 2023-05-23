@@ -71,8 +71,8 @@ const speakers = [
         autobio: 'As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary collaboration and understanding among science technology, humanities, and the arts.'
       }    
   ];
-  const speakersSection = document.querySelector('.speakerCard1');
-const speakersSectionMore = document.querySelector('.speakerCard2');
+  
+const speakerGrid = document.querySelector('.speakerGrid');
 const speakersMore = document.querySelector('.speakers_more');
 const displayed = 2;
 
@@ -94,20 +94,13 @@ function generateSpeakerCard(speaker) {
 
 function displaySpeakers(from, to) {
   let speakersHTML = '';
-  let speakersMoreHTML = '';
-  
+
   for (let i = from; i < to; i += 1) {
     const speaker = speakers[i];
-    
-    if (i < displayed) {
-      speakersHTML += generateSpeakerCard(speaker);
-    } else {
-      speakersMoreHTML += generateSpeakerCard(speaker);
-    }
+    speakersHTML += generateSpeakerCard(speaker);
   }
 
-  speakersSection.innerHTML = speakersHTML;
-  speakersSectionMore.innerHTML = speakersMoreHTML;
+  speakerGrid.innerHTML = speakersHTML;
 }
 
 function checkScreenSize() {
@@ -129,18 +122,18 @@ if (document.readyState !== 'loading') {
 function displayMore() {
   const remainingSpeakers = speakers.slice(displayed);
   let speakersMoreHTML = '';
-  
+
   for (const speaker of remainingSpeakers) {
     speakersMoreHTML += generateSpeakerCard(speaker);
   }
-  
-  speakersSectionMore.innerHTML = speakersMoreHTML;
+
+  speakerGrid.innerHTML += speakersMoreHTML;
 }
 
 speakersMore.addEventListener('click', (event) => {
   if (speakersMore.innerHTML === 'SEE LESS<i class="fas fa-angle-up" aria-hidden="true"></i>') {
+    displaySpeakers(0, displayed);
     speakersMore.innerHTML = 'More<i class="fas fa-angle-down"></i>';
-    speakersSectionMore.innerHTML = '';
   } else {
     displayMore();
     speakersMore.innerHTML = 'SEE LESS<i class="fas fa-angle-up"></i>';

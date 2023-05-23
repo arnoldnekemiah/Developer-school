@@ -107,8 +107,9 @@ header {
     width: 356px;
     margin-left: 16px;
     top: 142px;
-    background-color: #ada5cc;
-    opacity: 0.8;
+    box-sizing: border-box;
+    background: #F8F8F8;
+    border: 4px solid #FFFFFF;
     display: flex;
   }
   
@@ -163,7 +164,8 @@ header {
     height: 662px;
     width: 375px;
     margin: auto;
-    background-image: url(./images/program-bg.jpeg);
+    background: url(pattern_bg.png), #282B32;
+    mix-blend-mode: normal;
     background-size: contain;
     opacity: inherit;
   }
@@ -264,6 +266,18 @@ header {
   }
 
   /* speaker section */
+  .speakers {
+    width: 375px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .speakerGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+
   .speakers_section_title{
     display: flex;
     align-content: center;
@@ -274,6 +288,80 @@ header {
     width: 30px;
     height: 0;
     border: 2px solid #a04038;
+  }
+
+  .speaker_card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 14px;
+    width: 350px;
+    height: 110px;
+  }
+
+  .speaker_info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: auto;
+    max-width: calc(100% - 68px);
+    height: auto;
+  }
+
+  .speaker_name {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000;
+  }
+
+  .speaker_profession {
+    position: absolute;
+    padding-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 15px;
+    color: #f78c89;
+  }
+
+  .autobio {
+    position: absolute;
+    padding-top: 100px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 14px;
+    color: #000;
+  }
+
+  .speaker_desc {
+    margin-top: 0;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 9px;
+  line-height: 14px;
+  color: #000;
+  }
+
+  .speakers_more{
+    margin-top: 20%;
+    margin-left: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 356px;
+    height: 38px;
+    border: 1px solid #DCDCDC;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
   }
 
 
@@ -485,7 +573,7 @@ header {
     .program {
       width: 100%;
       height: 587px;
-      background: url(./images/program-bg.jpeg), #282b32;
+      background: url(pattern_bg.png), #282B32;
       mix-blend-mode: normal;
     }
   
@@ -570,4 +658,13 @@ header {
       margin-bottom: 50px;
       cursor: pointer;
     }
-}
+      .speakers {
+        width: 100%;
+      }
+      .speakerGrid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .speakers_more {
+        display: none;
+      }
+    }
