@@ -1,5 +1,6 @@
 # Developer-school
 Welcome to the school of Web and Android application Development
+![Microverse bagde](https://img.shields.io/badge/Microverse-blueviolet)
 
 <a name="readme-top"></a>
 
@@ -23,19 +24,19 @@ Welcome to the school of Web and Android application Development
 
 # 📖 Arnold's Web and Android Developer Club! <a name="about-project"></a>
 
-**my-portfolio!** is my second project at Microverse, in this project I follow microverse activity by following github flow, adding required files.
+**Developer School** 
+> This is the first capstone project from microverse. this project is a website for web developement schools, were students can see the courses info programs offered . built using html/css and javascript
 
-## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
+## 🛠 Built With <a name="built-with">
+</a>
 
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">HTML</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
-  </ul>
-</details>
+### Tech Stack <a name="tech-stack">
+- HTML/CSS
+- JS
+- Technologies:
+  - Git/Github
+  - Fontawesome</a>
 
 ### Key Features <a name="key-features"></a>
 - **Insight on the programming languages offered**
@@ -48,7 +49,9 @@ Welcome to the school of Web and Android application Development
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](#)
-- [Online Link](#)
+- [Intro Video](#)
+> By watching this short video, you will have a better understanding of my project and mission.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,8 +117,9 @@ If you like this project let me know sharing my portfolio with recruters!
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-I would like to thank microverse for this opportunity to train with them
+- This website is based off of [Cindy Shin's](https://www.behance.net/adagio07) design on Behance.
+- Here's is the link to the [design work](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015).
+- This work is under the CC Commons license 4.0
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
