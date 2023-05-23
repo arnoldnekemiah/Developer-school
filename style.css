@@ -275,7 +275,7 @@ header {
   .speakerGrid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
+    grid-gap: 80px;
   }
 
   .speakers_section_title{
@@ -295,7 +295,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 14px;
+    gap: 16px;
     width: 350px;
     height: 110px;
   }
@@ -663,6 +663,7 @@ header {
       }
       .speakerGrid {
         grid-template-columns: repeat(3, 1fr);
+        grid-gap: 80px;
       }
       .speakers_more {
         display: none;
