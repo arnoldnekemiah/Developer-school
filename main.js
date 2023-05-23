@@ -28,50 +28,50 @@ menuItems.forEach((item) => {
 
 // speakers section
 const speakers = [
-    {
-      name: 'Ikonde Arnold',
-      image: './images/speaker1.png',
-      alt: 'Speaker1',
-      intro: 'Bachelor of Science in Computer Engineering',
-      autobio: 'Benkler studies commons-based peer production, and published his seminal book, The Wealth of Networks in 2006'
-    },
-    {
-      name: 'Beteise Richmond',
-      image: './images/speaker2.png',
-      alt: 'Speaker2',
-      intro: 'Manager Web development at KCB Bank Uganda',
-      autobio: 'As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary collaboration and understanding among science technology, humanities, and the arts.'
-    },
-    {
-        name: 'Josh Erias',
-        image: './images/speaker3.png',
-        alt: 'Speaker3',
-        intro: 'Developer at Renu Uganda',
-        autobio: 'With the skills he obtained from several Bootcamps, he was able to stand up and rise through ranks'
-    },
-    {
-        name: 'Mwarisi Arthur',
-        image: './images/speaker4.png',
-        alt: 'Speaker4',
-        intro: 'Director of Art Centre Nabi and a board member of CC Korea',
-        autobio: 'As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary.'
-    },
-    {
-        name: 'Nantale Tracy',
-        image: './images/speaker5.png',
-        alt: 'Speaker5',
-        intro: 'Director of Art Centre Nabi and a board member of CC Korea',
-        autobio: 'As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary.'
-      },
-    {
-        name: 'Masika Jackie',
-        image: './images/speaker6.png',
-        alt: 'Speaker6',
-        intro: 'Director of Art Centre Nabi and a board member of CC Korea',
-        autobio: 'As the main venue for new media art production in Korea, Nabi promotes, Hacker Ethusiast.'
-      }    
-  ];
-  
+  {
+    name: 'Ikonde Arnold',
+    image: './images/speaker1.png',
+    alt: 'Speaker1',
+    intro: 'Bachelor of Science in Computer Engineering',
+    autobio: 'Benkler studies commons-based peer production, and published his seminal book, The Wealth of Networks in 2006',
+  },
+  {
+    name: 'Beteise Richmond',
+    image: './images/speaker2.png',
+    alt: 'Speaker2',
+    intro: 'Manager Web development at KCB Bank Uganda',
+    autobio: 'As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary collaboration and understanding among science technology, humanities, and the arts.',
+  },
+  {
+    name: 'Josh Erias',
+    image: './images/speaker3.png',
+    alt: 'Speaker3',
+    intro: 'Developer at Renu Uganda',
+    autobio: 'With the skills he obtained from several Bootcamps, he was able to stand up and rise through ranks',
+  },
+  {
+    name: 'Mwarisi Arthur',
+    image: './images/speaker4.png',
+    alt: 'Speaker4',
+    intro: 'Director of Art Centre Nabi and a board member of CC Korea',
+    autobio: 'As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary.',
+  },
+  {
+    name: 'Nantale Tracy',
+    image: './images/speaker5.png',
+    alt: 'Speaker5',
+    intro: 'Director of Art Centre Nabi and a board member of CC Korea',
+    autobio: 'As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary.',
+  },
+  {
+    name: 'Masika Jackie',
+    image: './images/speaker6.png',
+    alt: 'Speaker6',
+    intro: 'Director of Art Centre Nabi and a board member of CC Korea',
+    autobio: 'As the main venue for new media art production in Korea, Nabi promotes, Hacker Ethusiast.',
+  },
+];
+
 const speakerGrid = document.querySelector('.speakerGrid');
 const speakersMore = document.querySelector('.speakers_more');
 const displayed = 2;
@@ -123,6 +123,7 @@ function displayMore() {
   const remainingSpeakers = speakers.slice(displayed);
   let speakersMoreHTML = '';
 
+  // eslint-disable-next-line no-restricted-syntax
   for (const speaker of remainingSpeakers) {
     speakersMoreHTML += generateSpeakerCard(speaker);
   }
@@ -130,7 +131,7 @@ function displayMore() {
   speakerGrid.innerHTML += speakersMoreHTML;
 }
 
-speakersMore.addEventListener('click', (event) => {
+speakersMore.addEventListener('click', () => {
   if (speakersMore.innerHTML === 'SEE LESS<i class="fas fa-angle-up" aria-hidden="true"></i>') {
     displaySpeakers(0, displayed);
     speakersMore.innerHTML = 'More<i class="fas fa-angle-down"></i>';
