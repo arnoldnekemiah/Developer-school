@@ -39,7 +39,7 @@ const speakers = [
     name: 'Beteise Richmond',
     image: './images/speaker2.png',
     alt: 'Speaker2',
-    intro: 'Manager Web development at KCB Bank Uganda',
+    intro: 'Developer at KCB Bank Uganda',
     autobio: 'As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary collaboration and understanding among science technology, humanities, and the arts.',
   },
   {
