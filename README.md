@@ -49,7 +49,7 @@ Welcome to the school of Web and Android application Development
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](#)
-- [Intro Video](#)
+- [Intro Video](https://www.loom.com/share/b3660bd379d24dbd939349472d122444)
 > By watching this short video, you will have a better understanding of my project and mission.
 
 
