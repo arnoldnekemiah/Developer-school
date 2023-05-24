@@ -188,8 +188,6 @@ header {
   color: #5f5f5f;
 }
 
-
-
 /* second-frame */
 .second-frame {
   margin: auto;
@@ -201,6 +199,15 @@ header {
 
 .logo-info {
   margin-left: 50px;
+}
+
+.line41 {
+  position: absolute;
+  left: 42%;
+  top: 76%;
+  width: 30px;
+  height: 0;
+  border: 2px solid #a04038;
 }
 
 /* previous_summit */
@@ -240,7 +247,7 @@ header {
 .line3 {
   position: absolute;
   left: 150px;
-  top: 40px;
+  top: 35px;
   width: 30px;
   height: 0;
   border: 2px solid #a04038;
@@ -451,7 +458,7 @@ header {
     align-items: center;
     background: none;
     position: absolute;
-    top: -430px;
+    top: -400px;
   }
 
   .newMenu > .list-item > a {
@@ -584,17 +591,17 @@ header {
     justify-items: center;
     background-color: #db7d74;
   }
-  
+
   .line41 {
     position: absolute;
-  left: 50%;
-  top: 92%;
-  width: 30px;
-  height: 0;
-  border: 2px solid #a04038;
+    left: 50%;
+    top: 96%;
+    width: 30px;
+    height: 0;
+    border: 2px solid #a04038;
   }
 
-  .logo-info{
+  .logo-info {
     width: 338px;
     height: 17px;
     font-family: 'Lato', sans-serif;
@@ -604,6 +611,7 @@ header {
     line-height: 28px;
     margin-left: 15%;
   }
+
   /* previous-summit */
   .previous-summit {
     height: 508px;
