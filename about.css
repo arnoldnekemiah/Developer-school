@@ -128,7 +128,7 @@ header {
   height: 116px;
   font-family: 'Lato', sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 800;
   font-size: 14px;
   line-height: 25px;
 
@@ -152,7 +152,7 @@ header {
   display: flex;
   flex-direction: column;
   position: absolute;
-  bottom: 80px;
+  bottom: 1px;
 }
 
 .contact-info {
@@ -188,20 +188,24 @@ header {
   color: #5f5f5f;
 }
 
-.real-logo {
-  position: absolute;
-  bottom: -3px;
-  opacity: 0.9;
-  height: 93px;
-  width: 100%;
+
+
+/* second-frame */
+.second-frame {
+  margin: auto;
+  width: 375px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
 }
 
+.logo-info {
+  margin-left: 50px;
+}
+
+/* previous_summit */
 .previous-summit {
-  /* previous_summit */
-
   box-sizing: border-box;
-
-  /* Auto layout */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,6 +213,7 @@ header {
   gap: 35px;
   margin: auto;
   position: relative;
+  top: -54px;
   width: 375px;
   height: 583px;
   background: #fff;
@@ -217,7 +222,7 @@ header {
 }
 
 .heading-txt {
-  width: 273px;
+  width: 100%;
   height: 28px;
   position: absolute;
   left: 40px;
@@ -275,7 +280,7 @@ header {
   height: 301px;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  margin-top: -66px;
 }
 
 .particulars {
@@ -489,10 +494,9 @@ header {
   }
 
   .first-frame {
-    height: 887px;
+    height: 568px;
     width: 100%;
     background-image: url(./images/main_big.png);
-    opacity: 0.9;
     position: relative;
     flex-direction: column;
   }
@@ -540,13 +544,14 @@ header {
     align-items: center;
     position: absolute;
     left: 1px;
-    bottom: 0;
+    top: 450px;
     width: 100%;
   }
 
   .contact-info {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 800;
+    color: #2e2e2e;
     line-height: 25px;
     letter-spacing: 0.03em;
     text-align: center;
@@ -569,6 +574,37 @@ header {
     width: 542px;
   }
 
+  /* second frame section */
+  .second-frame {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: #db7d74;
+  }
+  
+  .line41 {
+    position: absolute;
+  left: 50%;
+  top: 92%;
+  width: 30px;
+  height: 0;
+  border: 2px solid #a04038;
+  }
+
+  .logo-info{
+    width: 338px;
+    height: 17px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    margin-left: 15%;
+  }
+  /* previous-summit */
   .previous-summit {
     height: 508px;
     width: 100%;
@@ -583,7 +619,7 @@ header {
     top: 40px;
   }
 
-  .line3 {
+  .line4 {
     position: absolute;
     left: 46%;
     top: 80px;
@@ -611,8 +647,7 @@ header {
   .footer {
     height: 245px;
     width: 100%;
-    left: 0.5px;
-    top: 1827.2794189453125px;
+    margin-top: -53px;
     background: #2e2e2e;
   }
 
