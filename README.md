@@ -48,9 +48,11 @@ Welcome to the school of Web and Android application Development
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](#)
-- [Intro Video](https://www.loom.com/share/b3660bd379d24dbd939349472d122444)
+- [Live Demo Link](https://arnoldnekemiah.github.io/Developer-school/)
+
 > By watching this short video, you will have a better understanding of my project and mission.
+- [Intro Video](https://drive.google.com/file/d/1-5Svc4LphJ8WuYrsn4Ss3gR7G76hnkkb/view?usp=sharing)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
